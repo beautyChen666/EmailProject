@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>mailBox homePage</title>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../simditor-1.0.5/styles/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="../simditor-1.0.5/styles/simditor.css" />
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="myApp">
+<!--头部-->
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-2 logo">
+                    <img src="../img/greenMail.jpg" alt="loading" title="mail">
+            </div>
+            <div class="col-md-10 col-sm-6">
+                <h1 class="headerTitle text-capitalize">
+                    <em>green eyes mailBox</em>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--中间内容-->
+<article class="article">
+    <!--左右布局-->
+    <div class="container">
+        <div class="row mainCont">
+            <aside class="asideList col-md-2  col-sm-12"> <!--左边 联系人/发件箱/收件箱-->
+                <ul class="navList">
+                    <li class="pageLi pageActive"><span class="glyphicon glyphicon-download-alt"></span><a href="#/inbox">收件箱</a></li>
+                    <li class="pageLi"><span class="glyphicon glyphicon-envelope"></span><a href="#/outbox/0">发件箱</a></li>
+                    <li class="pageLi"><span class="glyphicon glyphicon-user"></span><a href="#/contact">联系人</a></li>
+                </ul>
+            </aside>
+            <section class="sectionShow col-md-10 col-sm-12" ng-view> <!--右边 联系人/发件箱/收件箱的路由切换展示-->
+            </section>
+        </div>
+    </div>
+</article>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="http://apps.bdimg.com/libs/angular.js/1.2.9/angular.min.js"></script>
+<script src="http://apps.bdimg.com/libs/angular.js/1.2.9/angular-route.min.js"></script>
+<script type="text/javascript" src="../simditor-1.0.5/scripts/js/jquery.min.js"></script>
+<script type="text/javascript" src="../simditor-1.0.5/scripts/js/module.js"></script>
+<script type="text/javascript" src="../simditor-1.0.5/scripts/js/uploader.js"></script>
+<script type="text/javascript" src="../simditor-1.0.5/scripts/js/simditor.js"></script>
+<script src="../js/mailBox.js"></script>
+</body>
+</html>

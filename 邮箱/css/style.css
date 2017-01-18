@@ -1,0 +1,175 @@
+/*resert*/
+body,html,div,ul,li,p,section,article,aside,header,footer{
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+/*body settings*/
+body{
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color:#4d8863;
+    background-image: url("../img/aside.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.pageActive{ /* 主页侧导航的设置*/
+    background-color: #356AED;
+}
+.asideList{
+    background-image: url("../img/diannao.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*页面媒体查询*/
+@media screen and (max-height:980px){
+  .asideList{
+    min-height: 150px;
+  }
+}
+.mainCont{
+  background-color: #fff;
+  opacity: 0.9;
+}
+.container{
+    position: relative;
+}
+
+/*mailbox header settings*/
+.header{
+    background-image: url("../img/headerBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo{
+    padding-left: 0px;
+}
+
+/*mailbox content setttings*/
+.article>.container{
+    margin-top: 30px;
+    border: 2px solid #97d089;
+}
+.sectionShow{
+    border-left: 2px solid #97d089;
+}
+.navList{
+    border: 4px solid #42a74a;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.navList>li {
+    padding: 5px 10px;
+    margin: 10px;
+    border-bottom: 1px solid #98e493;
+    background-color: #333;
+}
+.navList>li>a{
+    color:#6bc1ac;
+    margin-left: 5px;
+}
+.navList>li>span{color:#5fa090;}
+.navList>li>a:hover{
+    text-decoration: none;
+}
+.navList>li:hover,.navList>li:hover>a{
+    color: #fff;
+    background-color: #97d089;
+}
+
+/*mail outbox settings*/
+.outbox,.skipContact{
+  margin: 30px 40px;
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus{
+    background-color: #48a54c;
+    border-color: #48a54c;
+    color:darkgreen;
+}
+.pagination .pageLi,.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus{
+    background-color: #48a54c;
+    border-color: #ddd;
+    color:darkgreen;
+}
+.ng-binding,#preA,#next,.pagination>li>a{
+    color: #75d479;
+}
+.ng-binding:hover{
+    color: #48a54c;
+}
+/*mail inbox settings*/
+.InboxHead>p{position: relative;}
+ #delete{
+    background-color: #a9d4a2;
+    outline: 0;
+    width: 60px;
+    line-height: 30px;
+    border-radius: 10px;
+    border: 1px solid #55ab4b;
+    color: aliceblue;
+    position: absolute;
+    right: 20%;
+    top: -51%;
+}
+#delete:hover{
+  background-color: #55ab4b;
+   color: black;
+}
+/*mail contact settings*/
+.glyphicon.glyphicon-send{
+    color: #6bc1ac;
+}
+.modal-backdrop{background-color: #e0f5e1;}  /*遮罩层的设置*/
+/*模态框样式的设置*/
+.modal-header{
+  background-color: #489a7c;
+}
+.modal-body li{
+  margin: 10px 20px;
+  background-color: #489a7c;
+  border-radius: 10px;
+  line-height: 50px;
+}
+.font-p{
+  color: aliceblue;
+}
+.modal-body span{
+  display: inline-block;
+  margin-right: 20px;
+  background-color: bisque;
+  color: #0d7922;
+  border-radius: 10px;
+  width: 84px;
+}
+.modal-body{
+  background-color: #55b981;
+}
+.modal-footer{
+  height: 90px;
+  position: relative;
+}
+.btnModal{
+    color: #fff;
+    background-color: #549a80;
+    border-color: #5cbfb2;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left:44%;
+}
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default{
+    color: #333;
+    background-color: #438c5d;
+    border-color: #549a80;
+}
+
+/*点击主题跳转具体内容页面*/
+.skipContact p{
+  margin: 15px 20px;
+}
+.singleContent{background-color: antiquewhite;}
+.hh{
+    background-color: #438c5d;
+
+}

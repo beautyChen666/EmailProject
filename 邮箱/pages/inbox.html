@@ -1,0 +1,56 @@
+
+<div class="Inbox">
+    <div class="InboxHead">  <!--收件箱展示头部-->
+        <h4>收件箱(共:10封)</h4>
+        <p>
+            <input type="checkbox" id="allChecked" name="allChecked"> &nbsp;&nbsp;<label for="allChecked">全选</label>
+            <button type="button" id="delete" ng-click="del()">删除</button>
+        </p>
+    </div>
+    <div class="InboxContent">    <!--收件箱展示中间内容-->
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <tr>
+                    <th></th>
+                    <th>发件人</th>
+                    <th>主题</th>
+                    <th>时间(2016年)</th>
+                </tr>
+                <tr ng-repeat="info in infos" class="tr" on-fishish-render-filter>
+                    <td><input type="checkbox" name="inBoxInt" ng-click="select()"></td>
+                    <td>{{info.name}}</td>
+                    <td ng-click="skipContent(info)"><a href="">{{info.title}}</a></td>
+                    <td>{{info.time}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="text-center">
+        <ul class="InboxFoot row pagination">
+            <li class="disabled" id="pre"><a id="preA" ng-click="pre()"  class="previous_link">&laquo;</a></li>
+            <li class="inboxPageLi" ng-repeat="x in lis track by $index"><a href="" ng-click="skipPages(x.id)">{{x.id}}</a></li>
+            <li id="next"><a id="nextA" ng-click="next()" class="next_link">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    ;$(function () {
+        var b=0;
+        function a() {
+            var number_of_items = $('.tr').size();
+            b=number_of_items;
+        };
+
+        $('#allChecked').change(function () {  // 全选的勾选作用
+            if($(this).is(":checked")){
+                $("input[name = inBoxInt]").prop("checked",true);
+            }
+            else {
+                $("input[name = inBoxInt]").prop("checked",false);
+            }
+        });
+    });
+
+</script>
+

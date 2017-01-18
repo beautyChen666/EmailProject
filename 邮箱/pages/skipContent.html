@@ -1,0 +1,26 @@
+<div class="skipContact">
+    <div class="row">
+        <p>发件人: <span>{{nowInfos.name}}</span></p>
+        <p>收件人: <span>beauty chen</span></p>
+        <p>时间: <span>{{nowInfos.time}}</span></p>
+    </div>
+    <div class="row singleContent">
+        &nbsp;&nbsp;&nbsp;&nbsp;<spn>内容：</spn>
+        <p class="text-center">{{nowInfos.title}}</p>
+        <div>
+            <p>{{nowInfos.content}}</p>
+        </div>
+    </div>
+    <div class="row">
+       <p>
+           <input type="text" name="" placeholder="快捷回复">
+           <textarea id="editor" placeholder="write something here" autofocus></textarea>
+           <!--<textarea name="" id="" cols="80" rows="5"  placeholder="click here to Reply or Forward"></textarea>-->
+       </p>
+    </div>
+</div>
+<script>
+    var editor = new Simditor({
+        textarea: $('#editor')
+    });
+</script>

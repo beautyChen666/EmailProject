@@ -1,0 +1,31 @@
+<div class="contactWrap">
+    <div class="outbox">
+        <div class="outboxHead">  <!--收件箱展示头部-->
+            <h4>联系人(共:10个)</h4>
+        </div>
+        <div class="outboxContent">    <!--收件箱展示中间内容-->
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <tr>
+                        <th>姓名</th>
+                        <th>邮箱</th>
+                        <th></th>
+                    </tr>
+                    <tr ng-repeat="info in infos">
+                        <td data-toggle="modal" data-target="#myModal" ng-click="skipFriendList(info)">{{info.name}}</td>
+                        <td>{{info.email}}</td>
+                        <td>
+                            <a href="#/outbox/{{info.email}}">
+                                <span class="glyphicon glyphicon-send" ng-click="skipSend(info.email)"></span>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--弹出好友具体信息-->
+<model>
+
+</model>
